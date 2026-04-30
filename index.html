@@ -54,15 +54,20 @@
         </script>
 </head>
 <body>
-    <div class="top-banner">
-        <div class="container top-banner-inner">
-            <p>Now available on iOS and Android</p>
-            <div class="top-banner-links">
-                <a href="https://apps.apple.com/us/app/my-cadence/id1545730360" target="_blank" rel="noopener">App Store</a>
-                <a href="https://play.google.com/store/apps/details?id=com.refractored.mycadence" target="_blank" rel="noopener">Google Play</a>
-            </div>
+    <header class="navbar">
+        <div class="container navbar-inner">
+            <a href="#" class="navbar-brand" aria-label="My Cadence home">
+                <img src="assets/icons/favicon-32.png" alt="" width="28" height="28" class="navbar-icon">
+                <span class="navbar-name">My Cadence</span>
+            </a>
+            <nav class="navbar-links" aria-label="Site navigation">
+                <a href="#features">Features</a>
+                <a href="mailto:hello@refractored.com?subject=My%20Cadence%20Support">Support</a>
+                <a href="https://www.refractored.com/about/" target="_blank" rel="noopener">Privacy</a>
+                <a href="https://apps.apple.com/us/app/my-cadence/id1545730360" class="navbar-cta" target="_blank" rel="noopener">Download</a>
+            </nav>
         </div>
-    </div>
+    </header>
 
     <main>
     <!-- Hero Section -->
@@ -133,7 +138,7 @@
     </section>
 
     <!-- Core Features Section -->
-    <section class="core-features">
+    <section class="core-features" id="features">
         <div class="container">
             <h2>Why My Cadence</h2>
             <div class="features-grid">
@@ -167,11 +172,28 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="mailto:hello@refractored.com?subject=My%20Cadence%20Support">Support</a>
-                <a href="https://www.refractored.com/about/" target="_blank" rel="noopener">Privacy</a>
+        <div class="container footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/icons/icon-120.png" alt="My Cadence icon" width="48" height="48" class="footer-icon">
+                    <span class="footer-app-name">My Cadence</span>
+                    <p class="footer-tagline">Real-time cadence for indoor cycling.</p>
+                </div>
+                <div class="footer-cols">
+                    <div class="footer-col">
+                        <h4>Download</h4>
+                        <a href="https://apps.apple.com/us/app/my-cadence/id1545730360" target="_blank" rel="noopener">App Store</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.refractored.mycadence" target="_blank" rel="noopener">Google Play</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="https://www.refractored.com/about/" target="_blank" rel="noopener">Privacy Policy</a>
+                        <a href="mailto:hello@refractored.com?subject=My%20Cadence%20Support">Support</a>
+                        <a href="https://www.refractored.com/" target="_blank" rel="noopener">Refractored LLC</a>
+                    </div>
+                </div>
             </div>
+            <div class="footer-divider"></div>
             <div class="footer-legal">
                 <p>Copyright &copy; 2026 <a href="https://www.refractored.com/" target="_blank" rel="noopener">Refractored LLC</a>. All rights reserved.</p>
             </div>
