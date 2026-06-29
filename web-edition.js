@@ -15,7 +15,7 @@ const connectButton = document.getElementById("connect-btn");
 const reconnectButton = document.getElementById("reconnect-btn");
 const disconnectButton = document.getElementById("disconnect-btn");
 const autoReconnectCheckbox = document.getElementById("auto-reconnect");
-const themeButtons = Array.from(document.querySelectorAll(".theme-swatch"));
+const themeSelect = document.getElementById("theme-select");
 
 let device = null;
 let cscMeasurementCharacteristic = null;
@@ -34,11 +34,8 @@ function updateCadence(value) {
 function setSelectedTheme(themeName) {
     document.body.dataset.theme = themeName;
     localStorage.setItem(STORAGE_KEYS.theme, themeName);
-
-    for (const button of themeButtons) {
-        const isSelected = button.dataset.theme === themeName;
-        button.classList.toggle("is-selected", isSelected);
-        button.setAttribute("aria-checked", isSelected ? "true" : "false");
+    if (themeSelect) {
+        themeSelect.value = themeName;
     }
 }
 
@@ -269,9 +266,9 @@ function initialize() {
         localStorage.setItem(STORAGE_KEYS.autoReconnect, event.target.checked ? "true" : "false");
     });
 
-    for (const themeButton of themeButtons) {
-        themeButton.addEventListener("click", () => {
-            setSelectedTheme(themeButton.dataset.theme);
+    if (themeSelect) {
+        themeSelect.addEventListener("change", (event) => {
+            setSelectedTheme(event.target.value);
         });
     }
 
