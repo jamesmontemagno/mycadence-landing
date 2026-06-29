@@ -117,9 +117,9 @@ function onCscMeasurement(event) {
     }
 
     const cadence = computeCadenceRpm(sample);
-    lastCadenceTimestamp = Date.now();
 
     if (cadence !== null) {
+        lastCadenceTimestamp = Date.now();
         updateCadence(cadence);
         setStatus("Connected and receiving cadence");
     }
