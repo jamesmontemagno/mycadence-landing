@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Cadence - Web Edition: connect your Bluetooth cadence sensor and view a big live RPM display in your browser.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#12151f">
+    <title>My Cadence - Web Edition</title>
+    <link rel="canonical" href="https://jamesmontemagno.github.io/mycadence-landing/web-edition.html">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/icon-180.png">
+    <link rel="stylesheet" href="web-edition.css">
+</head>
+<body data-theme="night-rider">
+    <main class="web-app">
+        <section class="display-panel">
+            <header class="branding">
+                <img src="assets/icons/favicon-32.png" alt="" width="32" height="32">
+                <div>
+                    <p class="eyebrow">My Cadence</p>
+                    <h1>My Cadence - Web Edition</h1>
+                </div>
+            </header>
+
+            <p id="status" class="status">Checking browser support...</p>
+
+            <div class="cadence-readout" aria-live="polite">
+                <span id="cadence-value">--</span>
+                <span class="unit">RPM</span>
+            </div>
+
+            <p class="sensor-meta">Saved sensor: <span id="saved-sensor">None</span></p>
+
+            <div class="controls">
+                <button id="connect-btn" class="btn btn-primary" type="button">Connect sensor</button>
+                <button id="reconnect-btn" class="btn btn-secondary" type="button">Reconnect saved sensor</button>
+                <button id="disconnect-btn" class="btn btn-secondary" type="button" disabled>Disconnect</button>
+            </div>
+
+            <label class="auto-reconnect">
+                <input id="auto-reconnect" type="checkbox">
+                Auto reconnect on next visit (when browser allows)
+            </label>
+        </section>
+
+        <section class="theme-panel">
+            <h2>Theme</h2>
+            <div class="theme-grid" role="radiogroup" aria-label="Color themes">
+                <button class="theme-swatch" data-theme="night-rider" style="--swatch-a:#12151f;--swatch-b:#31c48d;" type="button">Night Rider</button>
+                <button class="theme-swatch" data-theme="sunset-burst" style="--swatch-a:#2f142f;--swatch-b:#ff6b5b;" type="button">Sunset Burst</button>
+                <button class="theme-swatch" data-theme="arctic-glow" style="--swatch-a:#0e223d;--swatch-b:#8bd3ff;" type="button">Arctic Glow</button>
+                <button class="theme-swatch" data-theme="lime-punch" style="--swatch-a:#0b1f18;--swatch-b:#b5ff59;" type="button">Lime Punch</button>
+            </div>
+            <p class="footnote">Tip: Web Bluetooth works best on desktop Chrome/Edge and Android Chrome.</p>
+            <p><a class="back-link" href="index.html">← Back to landing page</a></p>
+        </section>
+    </main>
+    <script src="web-edition.js"></script>
+</body>
+</html>

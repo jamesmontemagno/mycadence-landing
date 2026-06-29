@@ -2,6 +2,8 @@
 
 Static landing page for My Cadence, a real-time cadence display app for indoor cycling.
 
+Includes a dedicated Web Bluetooth page (`web-edition.html`) that can connect to a cadence sensor, display live RPM, and save theme/reconnect preferences in the browser.
+
 ## Quick Start
 
 1. Clone this repo
@@ -30,6 +32,9 @@ Static landing page for My Cadence, a real-time cadence display app for indoor c
 mycadence-landing/
 ├── index.html          # Main landing page
 ├── styles.css          # All styling (no external dependencies)
+├── web-edition.html    # Web cadence display page
+├── web-edition.css     # Styling for Web Edition
+├── web-edition.js      # Web Bluetooth cadence logic
 ├── .gitignore          # Git ignore rules
 ├── README.md           # This file
 ├── CNAME               # Custom domain (optional)
@@ -48,6 +53,7 @@ mycadence-landing/
 - **Pro Features**: Ride history and tracking capabilities
 - **Lifestyle Section**: Real-world usage context
 - **Core Features**: Privacy, offline support, design, and compatibility
+- **Web Edition**: Browser-based cadence dashboard with Bluetooth sensor connection and theme selection
 - **Footer**: Support, privacy policy, and source code links
 
 ## Customization
@@ -77,7 +83,13 @@ The site is mobile-first and includes breakpoints for:
 - Optimized image assets
 - ~15KB total CSS
 - Fast Time to First Byte (TTFB)
-- No JavaScript required
+- Landing page itself requires no JavaScript
+
+## Web Edition Browser Support
+
+- Requires a browser with [Web Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API) support.
+- Works best on Chromium-based browsers (Chrome/Edge), especially on Android and desktop.
+- Some browsers do not support reconnecting to previously approved devices (`navigator.bluetooth.getDevices`), so users can always reconnect manually with **Connect sensor**.
 
 ## License
 
