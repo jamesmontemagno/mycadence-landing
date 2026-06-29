@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Cadence - Web Edition: connect your Bluetooth cadence sensor and view a big live RPM display in your browser.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#12151f">
+    <title>My Cadence - Web Edition</title>
+    <link rel="canonical" href="https://mycadence.app/web-edition.html">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/icon-180.png">
+    <link rel="stylesheet" href="web-edition.css">
+</head>
+<body data-theme="night-rider">
+    <main class="web-app">
+        <section class="display-panel">
+            <header class="top-banner">
+                <div class="branding">
+                    <img src="assets/icons/favicon-32.png" alt="" width="32" height="32">
+                    <div>
+                        <a class="eyebrow eyebrow-link" href="index.html">My Cadence</a>
+                        <h1>My Cadence - Web Edition</h1>
+                    </div>
+                </div>
+                <div class="theme-picker-inline">
+                    <label class="theme-label" for="theme-select">Theme</label>
+                    <select id="theme-select" class="theme-select" aria-label="Color theme">
+                        <option value="night-rider">Night Rider</option>
+                        <option value="sunset-burst">Sunset Burst</option>
+                        <option value="arctic-glow">Arctic Glow</option>
+                        <option value="lime-punch">Lime Punch</option>
+                        <option value="synthwave-pop">Synthwave Pop</option>
+                        <option value="bubblegum-blast">Bubblegum Blast</option>
+                        <option value="lava-lamp">Lava Lamp</option>
+                        <option value="midnight-gold">Midnight Gold</option>
+                    </select>
+                </div>
+            </header>
+
+            <p class="support-tip">Tip: Web Bluetooth works best on desktop Chrome/Edge and Android Chrome.</p>
+            <p id="status" class="status" role="status" aria-live="polite" aria-atomic="true">Checking browser support...</p>
+
+            <div class="cadence-readout" aria-live="polite">
+                <span id="cadence-value">--</span>
+                <span class="unit">RPM</span>
+            </div>
+
+            <p class="sensor-meta">Saved sensor: <span id="saved-sensor">None</span></p>
+
+            <div class="controls">
+                <button id="connect-btn" class="btn btn-primary" type="button">Connect sensor</button>
+                <button id="reconnect-btn" class="btn btn-secondary" type="button">Reconnect saved sensor</button>
+                <button id="disconnect-btn" class="btn btn-secondary" type="button" disabled>Disconnect</button>
+            </div>
+
+            <label class="auto-reconnect">
+                <input id="auto-reconnect" type="checkbox">
+                Auto reconnect on next visit (when browser allows)
+            </label>
+        </section>
+
+        <section class="app-upsell">
+            <h2>Get the full My Cadence app</h2>
+            <p class="upsell-copy">For smoother Bluetooth handling, native mobile UX, and Pro upgrades like ride history + custom themes, download the app.</p>
+            <div class="app-links">
+                <a href="https://apps.apple.com/us/app/my-cadence/id1545730360" class="btn btn-primary" target="_blank" rel="noopener">Download on App Store</a>
+                <a href="https://play.google.com/store/apps/details?id=com.refractored.mycadence" class="btn btn-secondary" target="_blank" rel="noopener">Get it on Google Play</a>
+            </div>
+            <p><a class="back-link" href="index.html">← Back to landing page</a></p>
+        </section>
+    </main>
+    <script src="web-edition.js"></script>
+</body>
+</html>
