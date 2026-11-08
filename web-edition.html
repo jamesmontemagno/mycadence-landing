@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="My Cadence - Web Edition: connect your Bluetooth cadence sensor and view a big live RPM display in your browser.">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#12151f">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#111113">
     <title>My Cadence - Web Edition</title>
     <link rel="canonical" href="https://mycadence.app/web-edition.html">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png">
@@ -13,7 +14,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/icon-180.png">
     <link rel="stylesheet" href="web-edition.css">
 </head>
-<body data-theme="night-rider">
+<body data-theme="system">
     <main class="web-app">
         <section class="display-panel">
             <header class="top-banner">
@@ -27,6 +28,7 @@
                 <div class="theme-picker-inline">
                     <label class="theme-label" for="theme-select">Theme</label>
                     <select id="theme-select" class="theme-select" aria-label="Color theme">
+                        <option value="system">Match system</option>
                         <option value="night-rider">Night Rider</option>
                         <option value="sunset-burst">Sunset Burst</option>
                         <option value="arctic-glow">Arctic Glow</option>
@@ -45,6 +47,7 @@
             <div class="cadence-readout" aria-live="polite">
                 <span id="cadence-value">--</span>
                 <span class="unit">RPM</span>
+                <img class="readout-line" src="assets/images/cadence-line.svg" alt="" width="2880" height="160">
             </div>
 
             <p class="sensor-meta">Saved sensor: <span id="saved-sensor">None</span></p>

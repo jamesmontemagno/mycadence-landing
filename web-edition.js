@@ -40,7 +40,7 @@ function setSelectedTheme(themeName) {
 }
 
 function loadTheme() {
-    const savedTheme = localStorage.getItem(STORAGE_KEYS.theme) || "night-rider";
+    const savedTheme = localStorage.getItem(STORAGE_KEYS.theme) || "system";
     setSelectedTheme(savedTheme);
 }
 

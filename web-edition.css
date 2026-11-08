@@ -1,13 +1,13 @@
 :root {
-    --bg: #12151f;
-    --panel: #1a2030;
-    --surface: #20283d;
-    --text: #ecf2ff;
-    --subtext: #adc2e5;
-    --accent: #31c48d;
-    --accent-contrast: #0b1f18;
-    --border: rgba(255, 255, 255, 0.14);
-    --shadow: 0 18px 45px rgba(0, 0, 0, 0.34);
+    --bg: #111113;
+    --panel: #1c1c1e;
+    --surface: #1c1c1e;
+    --text: #fff;
+    --subtext: #aeaeb2;
+    --accent: #ff8d28;
+    --accent-contrast: #111113;
+    --border: rgba(255, 255, 255, 0.16);
+    --shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
 }
 
 * {
@@ -17,20 +17,47 @@
 body {
     margin: 0;
     min-height: 100vh;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.07), transparent 40%), var(--bg);
+    color-scheme: dark;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
     color: var(--text);
+    -webkit-font-smoothing: antialiased;
+}
+
+body[data-theme="system"] {
+    color-scheme: light dark;
+    --bg: #f2f2f7;
+    --panel: #fff;
+    --surface: #fff;
+    --text: #000;
+    --subtext: #636366;
+    --readout: #000;
+    --link: #000;
+    /* #FF8D28 is too faint for a focus ring on light surfaces. */
+    --focus: #d9600a;
+    --well: #f2f2f7;
+    --border: rgba(0, 0, 0, 0.14);
+}
+
+@media (prefers-color-scheme: dark) {
+    body[data-theme="system"] {
+        --bg: #111113;
+        --panel: #1c1c1e;
+        --surface: #1c1c1e;
+        --text: #fff;
+        --subtext: #aeaeb2;
+        --readout: #fff;
+        --link: #fff;
+        --focus: #ff8d28;
+        --well: #111113;
+        --border: rgba(255, 255, 255, 0.16);
+    }
 }
 
 body[data-theme="night-rider"] {
-    --bg: #12151f;
-    --panel: #1a2030;
-    --surface: #20283d;
-    --text: #ecf2ff;
-    --subtext: #adc2e5;
-    --accent: #31c48d;
-    --accent-contrast: #0b1f18;
-    --border: rgba(255, 255, 255, 0.14);
+    --readout: #fff;
+    --link: #fff;
+    --well: #111113;
 }
 
 body[data-theme="sunset-burst"] {
@@ -123,7 +150,7 @@ body[data-theme="midnight-gold"] {
 .display-panel,
 .app-upsell {
     border: 1px solid var(--border);
-    background: linear-gradient(145deg, var(--panel), var(--surface));
+    background: var(--panel);
     border-radius: 22px;
     box-shadow: var(--shadow);
 }
@@ -193,14 +220,27 @@ h1 {
 }
 
 .cadence-readout {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     border: 1px solid var(--border);
     border-radius: 18px;
     min-height: min(52vh, 420px);
-    background: rgba(0, 0, 0, 0.12);
+    padding-bottom: 72px;
+    background: var(--well, rgba(0, 0, 0, 0.12));
+}
+
+.readout-line {
+    position: absolute;
+    left: 0;
+    bottom: 12px;
+    width: 100%;
+    max-width: none;
+    height: 64px;
+    object-fit: cover;
 }
 
 #cadence-value {
@@ -208,7 +248,7 @@ h1 {
     font-weight: 800;
     line-height: 0.92;
     letter-spacing: -0.05em;
-    color: var(--accent);
+    color: var(--readout, var(--accent));
 }
 
 .unit {
@@ -232,17 +272,29 @@ h1 {
 }
 
 .btn {
+    display: inline-block;
     border: 1px solid transparent;
     border-radius: 999px;
     font-size: 0.95rem;
     font-weight: 700;
     padding: 0.7rem 1rem;
     cursor: pointer;
+    text-decoration: none;
     transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
 }
 
 .btn:hover:not(:disabled) {
     transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn {
+        transition: none;
+    }
+
+    .btn:hover:not(:disabled) {
+        transform: none;
+    }
 }
 
 .btn:disabled {
@@ -295,7 +347,7 @@ h1 {
     width: 100%;
     border: 1px solid var(--border);
     border-radius: 12px;
-    background: rgba(0, 0, 0, 0.18);
+    background: var(--well, rgba(0, 0, 0, 0.18));
     color: var(--text);
     font-weight: 600;
     font-size: 0.95rem;
@@ -316,15 +368,19 @@ h1 {
 }
 
 .back-link {
-    color: var(--accent);
+    color: var(--link, var(--accent));
     font-weight: 700;
+}
+
+.auto-reconnect input {
+    accent-color: var(--accent);
 }
 
 .btn:focus-visible,
 .theme-select:focus-visible,
 .eyebrow-link:focus-visible,
 .back-link:focus-visible {
-    outline: 2px solid var(--accent);
+    outline: 3px solid var(--focus, var(--accent));
     outline-offset: 2px;
 }
 

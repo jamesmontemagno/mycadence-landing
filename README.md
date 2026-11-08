@@ -39,50 +39,50 @@ mycadence-landing/
 ├── README.md           # This file
 ├── CNAME               # Custom domain (optional)
 └── assets/
-    ├── images/         # Screenshots and marketing imagery
-    │   ├── hero.png
-    │   ├── pro-history.png
-    │   └── lifestyle.png
-    └── icons/          # App icon and badges (optional)
+    ├── images/         # App captures (AVIF, WebP, JPEG), cadence line SVG, social card
+    └── icons/          # App icon and favicons
 ```
 
 ## Content
 
-- **Hero Section**: App pitch with App Store and Google Play CTAs
-- **Value Strip**: Three key value propositions
-- **Pro Features**: Ride history and tracking capabilities
-- **Lifestyle Section**: Real-world usage context
-- **Core Features**: Privacy, offline support, design, and compatibility
-- **Web Edition**: Browser-based cadence dashboard with Bluetooth sensor connection and theme selection
-- **Footer**: Support, privacy policy, and source code links
+- **Hero**: "Your cadence, loud and clear." with App Store, Google Play, and Web Edition links
+- **Features**: Ride, history, charts, achievements, Scenic, and Pro, each with iPad and iPhone captures
+- **iPhone Duo**: One sideways-scrolling swimlane of open and closed layouts
+- **Platforms**: Which features come with iPhone and iPad, Android, and Web Edition
+- **Privacy**: What stays on the device, what Apple Health sync does, and what needs internet
+- **Web Edition**: Browser-based cadence display with Bluetooth sensor connection and theme selection
+- **Footer**: Download, privacy, support, Refractored, and Tiny Tool Town links
+
+Check product claims against the app before changing copy, including which features are Pro and which are iOS-only. Use "My Cadence", with the space, in all copy and metadata.
 
 ## Customization
 
-All colors, spacing, and typography are defined in CSS custom properties at the top of `styles.css`:
+Colors and spacing are CSS custom properties at the top of `styles.css`. Section colors are set on `.band-dark` and `.band-light`:
 
 ```css
 :root {
-    --color-coral: #FF6B5B;
-    --color-text-primary: #1A1A1A;
-    /* ... more variables ... */
+    --ink: #111113;
+    --paper: #f2f2f7;
+    --orange: #ff8d28;
 }
 ```
 
-Update these values to match your branding.
+The orange is deepened to `#d9600a` for headlines on light backgrounds, because `#ff8d28` only reaches 2.1:1 contrast there.
+
+## Images
+
+Each capture has two widths in AVIF and WebP, plus a JPEG fallback at the larger width. Add new ones in a `<picture>` with `width` and `height` set, and `loading="lazy"` below the fold. Don't use promo images with captions baked in; the page's own headlines do that job.
+
+`assets/images/cadence-line.svg` draws the app's cadence curve, `84 + 8*sin(t/9) + 3*sin(t/2.3)`, in its chart zone colors: yellow up to 78 RPM, orange up to 84, and red above.
 
 ## Responsive Design
 
-The site is mobile-first and includes breakpoints for:
-- Tablets (768px and below)
-- Mobile phones (480px and below)
-- Respects `prefers-reduced-motion` for accessibility
+The layout has one column on phones and two from 960px up. It follows `prefers-color-scheme` for light and dark mode, and `prefers-reduced-motion` turns off the hero line's reveal and smooth scrolling.
 
 ## Performance
 
 - Zero external dependencies (no frameworks, no CDNs)
-- Optimized image assets
-- ~15KB total CSS
-- Fast Time to First Byte (TTFB)
+- No analytics or trackers, because the site tells people there are none
 - Landing page itself requires no JavaScript
 
 ## Web Edition Browser Support
@@ -90,6 +90,7 @@ The site is mobile-first and includes breakpoints for:
 - Requires a browser with [Web Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API) support.
 - Works best on Chromium-based browsers (Chrome/Edge), especially on Android and desktop.
 - Some browsers do not support reconnecting to previously approved devices (`navigator.bluetooth.getDevices`), so users can always reconnect manually with **Connect sensor**.
+- New visitors get the **Match system** theme. Saved theme choices keep working, and Night Rider now uses the site's near-black and orange.
 
 ## License
 

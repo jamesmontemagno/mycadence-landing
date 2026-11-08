@@ -2,208 +2,398 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="My Cadence - Real-time cadence display for indoor cycling. Simple, free, and privacy-first.">
-        <meta name="robots" content="index, follow, max-image-preview:large">
-        <meta name="author" content="My Cadence">
-    <meta name="theme-color" content="#FF6B5B">
-    <title>My Cadence - Real-time Cadence Display for Indoor Cycling</title>
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="My Cadence - Real-time Cadence Display for Indoor Cycling">
-        <meta property="og:description" content="Connect your Bluetooth cadence sensor and see live RPM instantly. Privacy-first, offline-friendly, and free forever.">
-        <meta property="og:url" content="https://mycadence.app/">
-        <meta property="og:image" content="https://mycadence.app/assets/images/hero-optimized.jpg">
-        <meta property="og:image:width" content="508">
-        <meta property="og:image:height" content="1100">
-        <meta property="og:image:alt" content="My Cadence app showing a live cadence reading of 100 RPM.">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="My Cadence - Real-time Cadence Display for Indoor Cycling">
-        <meta name="twitter:description" content="Connect your Bluetooth cadence sensor and see live RPM instantly. Privacy-first, offline-friendly, and free forever.">
-        <meta name="twitter:image" content="https://mycadence.app/assets/images/hero-optimized.jpg">
-        <link rel="canonical" href="https://mycadence.app/">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/icon-180.png">
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="sitemap" type="application/xml" href="sitemap.xml">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>My Cadence: Big, Simple Cadence for Indoor Cycling</title>
+    <meta name="description" content="My Cadence is a big, simple cadence display for indoor cycling on iPhone, iPad, and Android. Connect a Bluetooth sensor and ride. No account and no analytics.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Refractored LLC">
+    <meta name="theme-color" content="#111113">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="My Cadence">
+    <meta property="og:title" content="My Cadence: Your cadence, loud and clear.">
+    <meta property="og:description" content="Big, simple cadence for indoor cycling on iPhone, iPad, and Android. No account and no analytics.">
+    <meta property="og:url" content="https://mycadence.app/">
+    <meta property="og:image" content="https://mycadence.app/assets/images/og-card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="The headline “Your cadence, loud and clear.” beside My Cadence on iPhone showing 90 RPM, with a cadence line running behind it.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="My Cadence: Your cadence, loud and clear.">
+    <meta name="twitter:description" content="Big, simple cadence for indoor cycling on iPhone, iPad, and Android. No account and no analytics.">
+    <meta name="twitter:image" content="https://mycadence.app/assets/images/og-card.jpg">
+    <link rel="canonical" href="https://mycadence.app/">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/icon-180.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="sitemap" type="application/xml" href="sitemap.xml">
     <link rel="stylesheet" href="styles.css">
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "My Cadence",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "iOS, Android",
-            "description": "Real-time cadence display for indoor cycling with Bluetooth cadence sensors.",
-            "url": "https://mycadence.app/",
-            "image": "https://mycadence.app/assets/images/hero-optimized.jpg",
-            "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD"
-            },
-            "downloadUrl": [
-                "https://apps.apple.com/us/app/my-cadence/id1545730360",
-                "https://play.google.com/store/apps/details?id=com.refractored.mycadence"
-            ],
-            "publisher": {
-                "@type": "Organization",
-                "name": "Refractored"
-            }
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "My Cadence",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "iOS, iPadOS, Android",
+        "description": "Big, simple cadence display for indoor cycling with Bluetooth cadence sensors.",
+        "url": "https://mycadence.app/",
+        "image": "https://mycadence.app/assets/images/og-card.jpg",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "downloadUrl": [
+            "https://apps.apple.com/us/app/my-cadence/id1545730360",
+            "https://play.google.com/store/apps/details?id=com.refractored.mycadence"
+        ],
+        "publisher": {
+            "@type": "Organization",
+            "name": "Refractored"
         }
-        </script>
+    }
+    </script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="navbar">
         <div class="container navbar-inner">
-            <a href="#" class="navbar-brand" aria-label="My Cadence home">
-                <img src="assets/icons/favicon-32.png" alt="" width="28" height="28" class="navbar-icon">
-                <span class="navbar-name">My Cadence</span>
+            <a href="#main" class="brand" aria-label="My Cadence home">
+                <img src="assets/icons/icon-120.png" alt="" width="28" height="28">
+                <span>My Cadence</span>
             </a>
             <nav class="navbar-links" aria-label="Site navigation">
-                <a href="#features">Features</a>
+                <a class="nav-features" href="#features">Features</a>
+                <a class="nav-optional" href="#pro">Pro</a>
                 <a href="web-edition.html">Web Edition</a>
-                <a href="mailto:hello@refractored.com?subject=My%20Cadence%20Support">Support</a>
-                <a href="https://www.refractored.com/about/" target="_blank" rel="noopener">Privacy</a>
-                <a href="https://apps.apple.com/us/app/my-cadence/id1545730360" class="navbar-cta" target="_blank" rel="noopener">Download</a>
+                <a class="nav-optional" href="mailto:hello@refractored.com?subject=My%20Cadence%20Support">Support</a>
+                <a class="nav-optional" href="https://www.refractored.com/about/" target="_blank" rel="noopener">Privacy</a>
+                <a class="navbar-cta" href="#download">Download</a>
             </nav>
         </div>
     </header>
 
-    <main>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Real-time Cadence Display</h1>
-                <p class="hero-subtitle">Connect your Bluetooth sensor and see your cadence instantly. Simple, fast, and always free.</p>
-                <div class="cta-buttons">
-                    <a href="web-edition.html" class="btn btn-primary">
-                        <span class="btn-label">Try Web Edition</span>
-                    </a>
-                    <a href="https://apps.apple.com/us/app/my-cadence/id1545730360" class="btn btn-primary" target="_blank" rel="noopener">
-                        <span class="btn-label">App Store</span>
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.refractored.mycadence" class="btn btn-primary" target="_blank" rel="noopener">
-                        <span class="btn-label">Google Play</span>
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="assets/images/hero-optimized.jpg" alt="My Cadence displaying real-time cadence of 100 RPM on iPhone" loading="eager" fetchpriority="high" decoding="async" width="508" height="1100">
-            </div>
-        </div>
-    </section>
-
-    <!-- Value Proposition Strip -->
-    <section class="value-strip">
-        <div class="container value-items">
-            <div class="value-item">
-                <span class="value-icon">📱</span>
-                <p><strong>Free forever</strong> with optional Pro customization</p>
-            </div>
-            <div class="value-item">
-                <span class="value-icon">🔒</span>
-                <p><strong>Zero analytics.</strong> Your data stays on your device.</p>
-            </div>
-            <div class="value-item">
-                <span class="value-icon">🌙</span>
-                <p><strong>Light & Dark modes</strong> built in</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pro & History Section -->
-    <section class="features-section pro-section">
-        <div class="container feature-row">
-            <div class="feature-text">
-                <h2>Track Your Progress</h2>
-                <p>For Pro users: see your ride history organized by month, with average cadence, maximum cadence, rotations, and elapsed time. Watch your improvement over time.</p>
-                <p class="feature-highlight">Upgrade to Pro to unlock full ride history and custom theme colors.</p>
-            </div>
-            <div class="feature-image">
-                <img src="assets/images/pro-history-optimized.jpg" alt="My Cadence Pro showing ride history with charts and statistics" loading="lazy" decoding="async" width="416" height="900">
-            </div>
-        </div>
-    </section>
-
-    <!-- Lifestyle Section -->
-    <section class="lifestyle-section">
-        <div class="container lifestyle-content">
-            <div class="lifestyle-image">
-                <img src="assets/images/lifestyle-optimized.jpg" alt="My Cadence in use during an indoor cycling session" loading="lazy" decoding="async" width="416" height="900">
-            </div>
-            <div class="lifestyle-text">
-                <h2>Sync Your Sensor and Ride</h2>
-                <p>Works with Wahoo, Moofit, Garmin, Magene, and any standard Bluetooth LE cadence sensor. No account. No cloud. Just pure real-time cadence on your device.</p>
-                <p class="feature-sub">Tap Configure, select your sensor, and start riding. That's it.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Core Features Section -->
-    <section class="core-features" id="features">
-        <div class="container">
-            <h2>Why My Cadence</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Privacy First</h3>
-                    <p>No internet required. No analytics. No tracking. Your cadence data never leaves your device.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Works Offline</h3>
-                    <p>Connect via Bluetooth and ride. The app works perfectly without any internet connection.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Beautiful Display</h3>
-                    <p>Large, easy-to-read numbers with customizable colors and themes. Dark mode included.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Sensor Compatible</h3>
-                    <p>Works with all standard Bluetooth LE cadence sensors from popular brands and bike computers.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Compatibility Section -->
-    <section class="compatibility">
-        <div class="container">
-            <h3>Compatible Sensors</h3>
-            <p class="compatibility-list">Works with Wahoo, Moofit, Garmin, Magene, and other standard Bluetooth LE cadence sensors</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <img src="assets/icons/icon-120.png" alt="My Cadence icon" width="48" height="48" class="footer-icon">
-                    <span class="footer-app-name">My Cadence</span>
-                    <p class="footer-tagline">Real-time cadence for indoor cycling.</p>
-                </div>
-                <div class="footer-cols">
-                    <div class="footer-col">
-                        <h4>Download</h4>
-                        <a href="https://apps.apple.com/us/app/my-cadence/id1545730360" target="_blank" rel="noopener">App Store</a>
-                        <a href="https://play.google.com/store/apps/details?id=com.refractored.mycadence" target="_blank" rel="noopener">Google Play</a>
+    <main id="main" tabindex="-1">
+        <section class="band band-dark hero">
+            <img class="cadence-line" src="assets/images/cadence-line.svg" alt="" width="2880" height="160">
+            <div class="container feature">
+                <div class="feature-text">
+                    <h1>Your cadence, <em>loud and clear.</em></h1>
+                    <p class="lede">Big, simple cadence for indoor cycling. Connect a Bluetooth sensor and ride on iPhone, iPad, or Android.</p>
+                    <div class="actions">
+                        <a class="btn btn-primary" href="https://apps.apple.com/us/app/my-cadence/id1545730360" target="_blank" rel="noopener">App Store</a>
+                        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.refractored.mycadence" target="_blank" rel="noopener">Google Play</a>
+                        <a class="btn btn-secondary" href="web-edition.html">Try Web Edition</a>
                     </div>
-                    <div class="footer-col">
-                        <h4>Company</h4>
-                        <a href="https://www.refractored.com/about/" target="_blank" rel="noopener">Privacy Policy</a>
-                        <a href="mailto:hello@refractored.com?subject=My%20Cadence%20Support">Support</a>
-                        <a href="https://www.refractored.com/" target="_blank" rel="noopener">Refractored LLC</a>
-                    </div>
+                    <p class="note">Free for unlimited rides, with no account. AVG, MAX, and ROTS require My Cadence Pro.</p>
+                </div>
+                <div class="stage">
+                    <picture class="device device-tablet">
+                        <source type="image/avif" srcset="assets/images/ipad-main-640.avif 640w, assets/images/ipad-main-1280.avif 1280w" sizes="(min-width: 960px) 40vw, 72vw">
+                        <source type="image/webp" srcset="assets/images/ipad-main-640.webp 640w, assets/images/ipad-main-1280.webp 1280w" sizes="(min-width: 960px) 40vw, 72vw">
+                        <img src="assets/images/ipad-main-1280.jpg" width="1280" height="1707" fetchpriority="high" decoding="async" alt="My Cadence on iPad showing 89 RPM above a large live cadence chart and average, max, rotation, and time stats.">
+                    </picture>
+                    <picture class="device device-phone">
+                        <source type="image/avif" srcset="assets/images/phone-free-320.avif 320w, assets/images/phone-free-640.avif 640w" sizes="(min-width: 960px) 16vw, 46vw">
+                        <source type="image/webp" srcset="assets/images/phone-free-320.webp 320w, assets/images/phone-free-640.webp 640w" sizes="(min-width: 960px) 16vw, 46vw">
+                        <img src="assets/images/phone-free-640.jpg" width="640" height="1391" decoding="async" alt="My Cadence on iPhone showing 90 RPM, a Stop Ride button, and a small live cadence line.">
+                    </picture>
                 </div>
             </div>
-            <div class="footer-divider"></div>
-            <p class="footer-tools">Find more tiny tools like this at <a href="https://www.tinytooltown.com/" target="_blank" rel="noopener">Tiny Tool Town</a>.</p>
-            <div class="footer-legal">
-                <p>Copyright &copy; 2026 <a href="https://www.refractored.com/" target="_blank" rel="noopener">Refractored LLC</a>. All rights reserved.</p>
+        </section>
+
+        <section class="band band-light" id="features">
+            <div class="container feature">
+                <div class="feature-text">
+                    <h2>Big, simple cadence for <em>indoor cycling.</em></h2>
+                    <p class="lede">One number you can read mid-sprint, a live cadence line below it, and a clear Start and Stop. Light and dark mode are built in.</p>
+                    <p class="lede">Works with Wahoo, Moofit, Garmin, Magene, and other sensors that broadcast the Bluetooth Speed and Cadence profile.</p>
+                    <p class="note">Cycling Power crank arms and bikes with custom built-in sensors may not show a reading. AVG, MAX, and ROTS require My Cadence Pro.</p>
+                </div>
+                <div class="stage stage-pair">
+                    <picture class="device">
+                        <source type="image/avif" srcset="assets/images/phone-ride-light-320.avif 320w, assets/images/phone-ride-light-640.avif 640w" sizes="(min-width: 960px) 22vw, 46vw">
+                        <source type="image/webp" srcset="assets/images/phone-ride-light-320.webp 320w, assets/images/phone-ride-light-640.webp 640w" sizes="(min-width: 960px) 22vw, 46vw">
+                        <img src="assets/images/phone-ride-light-640.jpg" width="640" height="1391" loading="lazy" decoding="async" alt="The Ride screen in light mode, showing 82 RPM and a row of ride stats.">
+                    </picture>
+                    <picture class="device">
+                        <source type="image/avif" srcset="assets/images/phone-ride-dark-320.avif 320w, assets/images/phone-ride-dark-640.avif 640w" sizes="(min-width: 960px) 22vw, 46vw">
+                        <source type="image/webp" srcset="assets/images/phone-ride-dark-320.webp 320w, assets/images/phone-ride-dark-640.webp 640w" sizes="(min-width: 960px) 22vw, 46vw">
+                        <img src="assets/images/phone-ride-dark-640.jpg" width="640" height="1391" loading="lazy" decoding="async" alt="The Ride screen in dark mode, showing 80 RPM and a row of ride stats.">
+                    </picture>
+                </div>
             </div>
+        </section>
+
+        <section class="band band-dark">
+            <div class="container feature feature-flip">
+                <div class="feature-text">
+                    <h2>Every ride, <em>remembered.</em></h2>
+                    <p class="lede">See rides grouped by month with total time, average cadence, and your best. On a big screen, History and the ride you pick sit side by side.</p>
+                    <p class="note">On iPhone and iPad, full ride history and activity charts require My Cadence Pro. Free keeps your two most recent rides in view.</p>
+                </div>
+                <div class="stage">
+                    <picture class="device device-tablet">
+                        <source type="image/avif" srcset="assets/images/ipad-history-640.avif 640w, assets/images/ipad-history-1280.avif 1280w" sizes="(min-width: 960px) 40vw, 72vw">
+                        <source type="image/webp" srcset="assets/images/ipad-history-640.webp 640w, assets/images/ipad-history-1280.webp 1280w" sizes="(min-width: 960px) 40vw, 72vw">
+                        <img src="assets/images/ipad-history-1280.jpg" width="1280" height="1707" loading="lazy" decoding="async" alt="Ride History on iPad, with a month-by-month ride list on the left and the selected ride's stats and cadence chart on the right.">
+                    </picture>
+                    <picture class="device device-phone">
+                        <source type="image/avif" srcset="assets/images/phone-history-320.avif 320w, assets/images/phone-history-640.avif 640w" sizes="(min-width: 960px) 16vw, 46vw">
+                        <source type="image/webp" srcset="assets/images/phone-history-320.webp 320w, assets/images/phone-history-640.webp 640w" sizes="(min-width: 960px) 16vw, 46vw">
+                        <img src="assets/images/phone-history-640.jpg" width="640" height="1391" loading="lazy" decoding="async" alt="Ride History on iPhone, showing four November rides under a monthly activity chart.">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section class="band band-light">
+            <div class="container feature">
+                <div class="feature-text">
+                    <h2>Every ride, <em>charted.</em></h2>
+                    <p class="lede">Open a ride to see how your cadence moved from start to finish, with average, best, rotations, and time. On iPhone and iPad, you also get estimated distance and calories.</p>
+                    <p class="note">Browsing all your ride charts on iPhone and iPad requires My Cadence Pro.</p>
+                </div>
+                <div class="stage">
+                    <picture class="device device-tablet">
+                        <source type="image/avif" srcset="assets/images/ipad-charts-640.avif 640w, assets/images/ipad-charts-1280.avif 1280w" sizes="(min-width: 960px) 40vw, 72vw">
+                        <source type="image/webp" srcset="assets/images/ipad-charts-640.webp 640w, assets/images/ipad-charts-1280.webp 1280w" sizes="(min-width: 960px) 40vw, 72vw">
+                        <img src="assets/images/ipad-charts-1280.jpg" width="1280" height="1707" loading="lazy" decoding="async" alt="A ride on iPad in dark mode, with six stat tiles above a full-height cadence chart colored yellow, orange, and red.">
+                    </picture>
+                    <picture class="device device-phone">
+                        <source type="image/avif" srcset="assets/images/phone-charts-320.avif 320w, assets/images/phone-charts-640.avif 640w" sizes="(min-width: 960px) 16vw, 46vw">
+                        <source type="image/webp" srcset="assets/images/phone-charts-320.webp 320w, assets/images/phone-charts-640.webp 640w" sizes="(min-width: 960px) 16vw, 46vw">
+                        <img src="assets/images/phone-charts-640.jpg" width="640" height="1391" loading="lazy" decoding="async" alt="The same ride on iPhone: 81 RPM average, 91 RPM best, 18 minutes, and a cadence chart.">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section class="band band-dark">
+            <div class="container feature feature-flip">
+                <div class="feature-text">
+                    <h2>Earn badges <em>as you ride.</em></h2>
+                    <p class="lede">Celebrate your rhythm, your routine, and your milestones. Achievements are private and stay on your device.</p>
+                    <p class="note">Achievement progress requires My Cadence Pro. Earned badges stay yours if Pro expires.</p>
+                </div>
+                <div class="stage">
+                    <picture class="device device-tablet">
+                        <source type="image/avif" srcset="assets/images/ipad-achievements-640.avif 640w, assets/images/ipad-achievements-1280.avif 1280w" sizes="(min-width: 960px) 40vw, 72vw">
+                        <source type="image/webp" srcset="assets/images/ipad-achievements-640.webp 640w, assets/images/ipad-achievements-1280.webp 1280w" sizes="(min-width: 960px) 40vw, 72vw">
+                        <img src="assets/images/ipad-achievements-1280.jpg" width="1280" height="1707" loading="lazy" decoding="async" alt="Achievements on iPad, listing First Spin, Showing Up, Time in the Saddle, Turning the Cranks, and Staying Power with progress bars.">
+                    </picture>
+                    <picture class="device device-phone">
+                        <source type="image/avif" srcset="assets/images/phone-achievements-320.avif 320w, assets/images/phone-achievements-640.avif 640w" sizes="(min-width: 960px) 16vw, 46vw">
+                        <source type="image/webp" srcset="assets/images/phone-achievements-320.webp 320w, assets/images/phone-achievements-640.webp 640w" sizes="(min-width: 960px) 16vw, 46vw">
+                        <img src="assets/images/phone-achievements-640.jpg" width="640" height="1391" loading="lazy" decoding="async" alt="Achievements on iPhone, with 8 achievements earned and First Spin marked complete.">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section class="band band-light">
+            <div class="container feature">
+                <div class="feature-text">
+                    <h2>Ride somewhere <em>beautiful.</em></h2>
+                    <p class="lede">Pick a first-person cycling video and ride along while My Cadence tracks your sensor. Routes come from the <a href="https://pedalscape.com/" target="_blank" rel="noopener">PedalScape</a> catalog.</p>
+                    <p class="note">iPhone and iPad only. Videos stream from YouTube, so Scenic needs internet. Three videos are free, and the full catalog requires My Cadence Pro.</p>
+                </div>
+                <div class="stage">
+                    <picture class="device device-tablet">
+                        <source type="image/avif" srcset="assets/images/ipad-scenic-640.avif 640w, assets/images/ipad-scenic-1280.avif 1280w" sizes="(min-width: 960px) 40vw, 72vw">
+                        <source type="image/webp" srcset="assets/images/ipad-scenic-640.webp 640w, assets/images/ipad-scenic-1280.webp 1280w" sizes="(min-width: 960px) 40vw, 72vw">
+                        <img src="assets/images/ipad-scenic-1280.jpg" width="1280" height="1707" loading="lazy" decoding="async" alt="Scenic Rides on iPad, with a search field, scenery filters, and a grid of video thumbnails showing mountains, lakes, and countryside roads.">
+                    </picture>
+                    <picture class="device device-phone">
+                        <source type="image/avif" srcset="assets/images/phone-scenic-320.avif 320w, assets/images/phone-scenic-640.avif 640w" sizes="(min-width: 960px) 16vw, 46vw">
+                        <source type="image/webp" srcset="assets/images/phone-scenic-320.webp 320w, assets/images/phone-scenic-640.webp 640w" sizes="(min-width: 960px) 16vw, 46vw">
+                        <img src="assets/images/phone-scenic-640.jpg" width="640" height="1391" loading="lazy" decoding="async" alt="Scenic Rides on iPhone, featuring a video of a riverside road below green mountains.">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section class="band band-dark" id="pro">
+            <div class="container feature feature-flip">
+                <div class="feature-text">
+                    <h2>Make it yours <em>with Pro.</em></h2>
+                    <p class="lede">My Cadence is free for unlimited rides. My Cadence Pro adds custom colors, more stats, and more of your history. Choose monthly or lifetime. Both unlock the same features.</p>
+                    <h3 class="list-heading">On iPhone, iPad, and Android</h3>
+                    <ul class="grouped">
+                        <li>Custom colors</li>
+                        <li>AVG, MAX, and ROTS during your ride</li>
+                        <li>Achievement progress</li>
+                        <li>Ride backup, import, and export</li>
+                    </ul>
+                    <h3 class="list-heading">On iPhone and iPad</h3>
+                    <ul class="grouped">
+                        <li>Full ride history and activity charts</li>
+                        <li>Full scenic catalog</li>
+                        <li>Apple Health sync</li>
+                        <li>Spoken ride announcements</li>
+                        <li>Live Activity on iPhone</li>
+                    </ul>
+                </div>
+                <div class="stage">
+                    <picture class="device device-tablet">
+                        <source type="image/avif" srcset="assets/images/ipad-pro-640.avif 640w, assets/images/ipad-pro-1280.avif 1280w" sizes="(min-width: 960px) 40vw, 72vw">
+                        <source type="image/webp" srcset="assets/images/ipad-pro-640.webp 640w, assets/images/ipad-pro-1280.webp 1280w" sizes="(min-width: 960px) 40vw, 72vw">
+                        <img src="assets/images/ipad-pro-1280.jpg" width="1280" height="1707" loading="lazy" decoding="async" alt="The Ride screen on iPad with a custom orange theme, showing 80 RPM over a large live cadence chart and four Pro stats.">
+                    </picture>
+                    <picture class="device device-phone">
+                        <source type="image/avif" srcset="assets/images/phone-pro-320.avif 320w, assets/images/phone-pro-640.avif 640w" sizes="(min-width: 960px) 16vw, 46vw">
+                        <source type="image/webp" srcset="assets/images/phone-pro-320.webp 320w, assets/images/phone-pro-640.webp 640w" sizes="(min-width: 960px) 16vw, 46vw">
+                        <img src="assets/images/phone-pro-640.jpg" width="640" height="1391" loading="lazy" decoding="async" alt="The Ride screen on iPhone with the same custom orange theme and AVG, MAX, ROTS, and TIME tiles.">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section class="band band-light lane-band" aria-labelledby="duo-heading">
+            <div class="container">
+                <h2 id="duo-heading">Ride on iPhone Duo, <em>open or closed.</em></h2>
+                <p class="lede">Ride and Scenic rearrange themselves as you fold, and your Start and Stop stay on screen. iPhone Duo support is in the iPhone app only.</p>
+            </div>
+            <div class="lane" role="group" aria-label="My Cadence on iPhone Duo. Scroll sideways for more." tabindex="0">
+                <figure>
+                    <picture class="device">
+                        <source type="image/avif" srcset="assets/images/duo-closed-ride-360.avif 360w, assets/images/duo-closed-ride-720.avif 720w" sizes="360px">
+                        <source type="image/webp" srcset="assets/images/duo-closed-ride-360.webp 360w, assets/images/duo-closed-ride-720.webp 720w" sizes="360px">
+                        <img src="assets/images/duo-closed-ride-720.jpg" width="720" height="1048" loading="lazy" decoding="async" alt="iPhone Duo closed, with the Ride screen showing 85 RPM, a Stop Ride button, and a live cadence line.">
+                    </picture>
+                    <figcaption>Closed</figcaption>
+                </figure>
+                <figure>
+                    <picture class="device">
+                        <source type="image/avif" srcset="assets/images/duo-open-ride-720.avif 720w, assets/images/duo-open-ride-1440.avif 1440w" sizes="740px">
+                        <source type="image/webp" srcset="assets/images/duo-open-ride-720.webp 720w, assets/images/duo-open-ride-1440.webp 1440w" sizes="740px">
+                        <img src="assets/images/duo-open-ride-1440.jpg" width="1440" height="1013" loading="lazy" decoding="async" alt="iPhone Duo open, with the current RPM on the left and a live cadence chart and stats on the right.">
+                    </picture>
+                    <figcaption>Open, on Ride</figcaption>
+                </figure>
+                <figure>
+                    <picture class="device">
+                        <source type="image/avif" srcset="assets/images/duo-open-history-720.avif 720w, assets/images/duo-open-history-1440.avif 1440w" sizes="740px">
+                        <source type="image/webp" srcset="assets/images/duo-open-history-720.webp 720w, assets/images/duo-open-history-1440.webp 1440w" sizes="740px">
+                        <img src="assets/images/duo-open-history-1440.jpg" width="1440" height="1013" loading="lazy" decoding="async" alt="iPhone Duo open, with the ride list on one side and the selected ride's stats and chart on the other.">
+                    </picture>
+                    <figcaption>Open, on History</figcaption>
+                </figure>
+                <figure>
+                    <picture class="device">
+                        <source type="image/avif" srcset="assets/images/duo-open-scenic-720.avif 720w, assets/images/duo-open-scenic-1440.avif 1440w" sizes="740px">
+                        <source type="image/webp" srcset="assets/images/duo-open-scenic-720.webp 720w, assets/images/duo-open-scenic-1440.webp 1440w" sizes="740px">
+                        <img src="assets/images/duo-open-scenic-1440.jpg" width="1440" height="1013" loading="lazy" decoding="async" alt="iPhone Duo open, with the Scenic Rides catalog across the full display.">
+                    </picture>
+                    <figcaption>Open, on Scenic</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="band band-dark" aria-labelledby="platforms-heading">
+            <div class="container">
+                <h2 id="platforms-heading">Pick your <em>screen.</em></h2>
+                <p class="lede">The cadence display is free everywhere. Here's what else comes with each version.</p>
+                <div class="table-wrap" role="region" aria-label="Features by platform" tabindex="0">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col"><span class="visually-hidden">Feature</span></th>
+                                <th scope="col">iPhone and iPad</th>
+                                <th scope="col">Android</th>
+                                <th scope="col">Web Edition</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">Live cadence</th><td>Free</td><td>Free</td><td>Free</td></tr>
+                            <tr><th scope="row">Ride history and ride charts</th><td>Latest 2 free, all with <span class="pro">Pro</span></td><td>Free</td><td class="na"><span>Not available</span></td></tr>
+                            <tr><th scope="row">Monthly activity charts</th><td><span class="pro">Pro</span></td><td class="na"><span>Not available</span></td><td class="na"><span>Not available</span></td></tr>
+                            <tr><th scope="row">Achievement progress</th><td><span class="pro">Pro</span></td><td><span class="pro">Pro</span></td><td class="na"><span>Not available</span></td></tr>
+                            <tr><th scope="row">AVG, MAX, and ROTS</th><td><span class="pro">Pro</span></td><td><span class="pro">Pro</span></td><td class="na"><span>Not available</span></td></tr>
+                            <tr><th scope="row">Custom colors</th><td><span class="pro">Pro</span></td><td><span class="pro">Pro</span></td><td>Preset themes</td></tr>
+                            <tr><th scope="row">Scenic video rides</th><td>3 free, all with <span class="pro">Pro</span></td><td class="na"><span>Not available</span></td><td class="na"><span>Not available</span></td></tr>
+                            <tr><th scope="row">Apple Health sync</th><td><span class="pro">Pro</span></td><td class="na"><span>Not available</span></td><td class="na"><span>Not available</span></td></tr>
+                            <tr><th scope="row">Spoken announcements</th><td><span class="pro">Pro</span></td><td class="na"><span>Not available</span></td><td class="na"><span>Not available</span></td></tr>
+                            <tr><th scope="row">Live Activity on iPhone</th><td><span class="pro">Pro</span></td><td class="na"><span>Not available</span></td><td class="na"><span>Not available</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="band band-light" aria-labelledby="privacy-heading">
+            <div class="container">
+                <h2 id="privacy-heading">No account. <em>No analytics.</em></h2>
+                <p class="lede">My Cadence has no sign-up and no analytics or tracking code. Neither does this site.</p>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Rides stay on your device</h3>
+                        <p>My Cadence stores your rides on your device. They leave the app only when you export them or sync them to Apple Health.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Apple Health is your call</h3>
+                        <p>With your permission, Pro on iPhone and iPad saves rides as workouts with cadence and estimated energy, and can read your weight for calorie estimates.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Rides work offline</h3>
+                        <p>A sensor ride needs only Bluetooth. Scenic videos stream from YouTube and need internet, and purchases go through the App Store or Google Play.</p>
+                    </div>
+                </div>
+                <p class="note"><a href="https://www.refractored.com/about/" target="_blank" rel="noopener">Read the privacy policy</a></p>
+            </div>
+        </section>
+
+        <section class="band band-dark" aria-labelledby="web-heading">
+            <div class="container">
+                <h2 id="web-heading">Just a browser? <em>Try Web Edition.</em></h2>
+                <p class="lede">Connect your sensor over Web Bluetooth and get a big live RPM with nothing to install. It works best in desktop Chrome or Edge and Android Chrome, and it doesn't save rides.</p>
+                <div class="actions">
+                    <a class="btn btn-secondary" href="web-edition.html">Open Web Edition</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="band band-light closing" id="download" aria-labelledby="download-heading">
+            <div class="container narrow">
+                <img class="closing-icon" src="assets/icons/icon-180.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+                <h2 id="download-heading">Your next ride, <em>loud and clear.</em></h2>
+                <p class="lede">Free for unlimited rides on iPhone, iPad, and Android.</p>
+                <div class="actions">
+                    <a class="btn btn-primary" href="https://apps.apple.com/us/app/my-cadence/id1545730360" target="_blank" rel="noopener">App Store</a>
+                    <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.refractored.mycadence" target="_blank" rel="noopener">Google Play</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="band band-dark footer">
+        <img class="cadence-line" src="assets/images/cadence-line.svg" alt="" width="2880" height="160" loading="lazy" decoding="async">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <img src="assets/icons/icon-120.png" alt="" width="48" height="48" loading="lazy" decoding="async">
+                <p class="footer-name">My Cadence</p>
+                <p class="note">Big, simple cadence for indoor cycling.</p>
+            </div>
+            <nav class="footer-cols" aria-label="Footer">
+                <div>
+                    <h2 class="footer-heading">Download</h2>
+                    <a href="https://apps.apple.com/us/app/my-cadence/id1545730360" target="_blank" rel="noopener">App Store</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.refractored.mycadence" target="_blank" rel="noopener">Google Play</a>
+                    <a href="web-edition.html">Web Edition</a>
+                </div>
+                <div>
+                    <h2 class="footer-heading">Company</h2>
+                    <a href="https://www.refractored.com/about/" target="_blank" rel="noopener">Privacy Policy</a>
+                    <a href="mailto:hello@refractored.com?subject=My%20Cadence%20Support">Support</a>
+                    <a href="https://www.refractored.com/" target="_blank" rel="noopener">Refractored LLC</a>
+                </div>
+            </nav>
+        </div>
+        <div class="container footer-legal">
+            <p>Find more tiny tools like this at <a href="https://www.tinytooltown.com/" target="_blank" rel="noopener">Tiny Tool Town</a>.</p>
+            <p>Copyright &copy; 2026 <a href="https://www.refractored.com/" target="_blank" rel="noopener">Refractored LLC</a>. All rights reserved.</p>
         </div>
     </footer>
-    </main>
 </body>
 </html>
