@@ -1,12 +1,12 @@
 {
   "name": "My Cadence",
-  "short_name": "MyCadence",
-  "description": "Real-time cadence display for indoor cycling.",
+  "short_name": "My Cadence",
+  "description": "Big, simple cadence for indoor cycling.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#FF6B5B",
+  "background_color": "#111113",
+  "theme_color": "#111113",
   "icons": [
     {
       "src": "assets/icons/icon-120.png",
